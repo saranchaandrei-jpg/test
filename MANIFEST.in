@@ -1,0 +1,14 @@
+# Files to include in the source distribution (sdist) that setuptools
+# would not pick up automatically from package discovery alone.
+
+include README.md
+include LICENSE
+include pyproject.toml
+
+recursive-include src/sample_package py.typed
+recursive-include src/sample_package/data *.json
+
+recursive-include tests *.py
+
+global-exclude __pycache__
+global-exclude *.py[cod]
